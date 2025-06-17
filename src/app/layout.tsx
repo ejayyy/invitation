@@ -27,7 +27,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="min-h-screen font-[family-name:var(--font-geist-sans)] sm:w-3xl mx-auto">
+          <main>{children}</main>
+          <footer className="p-4 text-center text-xs text-gray-500">
+            <p>ⓒ 2025. EJ n John All rights reserved.</p>
+          </footer>
+        </div>
       </body>
     </html>
   );
