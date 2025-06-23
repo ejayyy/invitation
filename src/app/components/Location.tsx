@@ -7,10 +7,10 @@ const Location = () => {
   const executeScript = useCallback(() => {
     const scriptTag = document.createElement("script");
     const inlineScript = document.createTextNode(`new window.daum.roughmap.Lander({
-      "timestamp" : "1652464367301",
-      "key" : "2a8fe",
+      "timestamp" : "1750665694551",
+      "key" : "42qg6pmn4ri",
       "mapWidth" : "100%",
-      "mapHeight" : "360"
+      "mapHeight" : "600"
     }).render();`);
     scriptTag.appendChild(inlineScript);
     document.body.appendChild(scriptTag);
@@ -58,7 +58,7 @@ const Location = () => {
       </div>
       
       <div
-        id="daumRoughmapContainer1652464367301"
+        id="daumRoughmapContainer1750665694551"
         className="w-full root_daum_roughmap root_daum_roughmap_landing"
       ></div>
 
