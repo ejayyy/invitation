@@ -3,19 +3,19 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const GROOM_NAME = "○○○";
-const GROOM_ACCOUNT_NUMBER = "○○은행 ***-***-******";
-const GROOM_FATHER_NAME = "○○○";
-const GROOM_FATHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
-const GROOM_MOTHER_NAME = "○○○";
-const GROOM_MOTHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
+const GROOM_NAME = "한승헌";
+const GROOM_ACCOUNT_NUMBER = "카카오 3333-01-1502699";
+const GROOM_FATHER_NAME = "한영환";
+const GROOM_FATHER_ACCOUNT_NUMBER = "우리은행 213-239541-02-101";
+const GROOM_MOTHER_NAME = "박주희";
+const GROOM_MOTHER_ACCOUNT_NUMBER = "우리은행 1002-246-355304";
 
-const BRIDE_NAME = "○○○";
-const BRIDE_ACCOUNT_NUMBER = "○○은행 ***-***-******";
-const BRIDE_FATHER_NAME = "○○○";
-const BRIDE_FATHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
-const BRIDE_MOTHER_NAME = "○○○";
-const BRIDE_MOTHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
+const BRIDE_NAME = "하은지";
+const BRIDE_ACCOUNT_NUMBER = "하나은행 355-910451-58907";
+const BRIDE_FATHER_NAME = "하후동";
+const BRIDE_FATHER_ACCOUNT_NUMBER = "우리은행 1005-903-884007";
+const BRIDE_MOTHER_NAME = "박옥분";
+const BRIDE_MOTHER_ACCOUNT_NUMBER = "우리은행 1005-403-217198";
 
 const AccountModal = ({ title, accounts, visible, onClose }: {
   title: string,
@@ -33,19 +33,21 @@ const AccountModal = ({ title, accounts, visible, onClose }: {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-sm">
+      <div className="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-md">
         <h2 className="text-lg font-bold mb-4">{title}</h2>
-        {accounts.map((acc, index) => (
-          <div key={index} className="flex justify-between items-center py-2">
-            <span>{acc.name}</span>
-            <button
-              onClick={() => handleCopy(acc.number)}
-              className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-1 px-3 rounded text-sm"
-            >
-              {acc.number} (복사)
-            </button>
-          </div>
-        ))}
+        <div className="space-y-3">
+          {accounts.map((acc, index) => (
+            <div key={index} className="grid grid-cols-3 items-center gap-2">
+              <span className="col-span-1 text-left text-sm">{acc.name}</span>
+              <button
+                onClick={() => handleCopy(acc.number)}
+                className="col-span-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-3 rounded text-sm whitespace-normal text-left break-all"
+              >
+                {acc.number} (복사)
+              </button>
+            </div>
+          ))}
+        </div>
         <p className="text-xs text-gray-500 mt-4">
           계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.
         </p>
