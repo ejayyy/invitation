@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 
-const GROOM_NAME = "○○○";
-const GROOM_FATHER_NAME = "○○○";
-const GROOM_MOTHER_NAME = "○○○";
-const BRIDE_NAME = "○○○";
-const BRIDE_FATHER_NAME = "○○○";
-const BRIDE_MOTHER_NAME = "○○○";
+const GROOM_NAME = "한승헌";
+const GROOM_FATHER_NAME = "한영환";
+const GROOM_MOTHER_NAME = "박주희";
+const BRIDE_NAME = "하은지";
+const BRIDE_FATHER_NAME = "하후동";
+const BRIDE_MOTHER_NAME = "박옥분";
 
 const Greeting = () => {
   return (
