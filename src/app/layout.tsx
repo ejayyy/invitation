@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Gowun_Dodum } from "next/font/google";
+import { Noto_Serif_KR } from "next/font/google";
 import "./globals.css";
 
-const gowunDodum = Gowun_Dodum({
-  variable: "--font-gowun-dodum",
+const notoSerifKr = Noto_Serif_KR({
   subsets: ["latin"],
-  weight: "400",
-  display: "swap",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -20,15 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${gowunDodum.variable} antialiased`}>
-        <div className="min-h-screen sm:w-3xl mx-auto">
-          <main>{children}</main>
-          <footer className="p-4 text-center text-xs text-gray-500">
-            <p>ⓒ 2025. EJ n John All rights reserved.</p>
-          </footer>
-        </div>
-      </body>
+    <html lang="ko">
+      <body className={notoSerifKr.className}>{children}</body>
     </html>
   );
 }

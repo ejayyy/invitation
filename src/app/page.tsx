@@ -1,13 +1,56 @@
+"use client";
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import Title from "./components/Title";
+import Greeting from "./components/Greeting";
+import Gallery from "./components/Gallery";
+import Location from "./components/Location";
+import Quote from "./components/Quote";
+import CongratulatoryMoney from "./components/CongratulatoryMoney";
+import Share from "./components/Share";
+
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://developers.kakao.com/sdk/js/kakao.min.js";
+    document.body.appendChild(script);
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
-    <div className="relative">
-      <video className="w-screen h-screen object-cover" autoPlay loop muted playsInline poster="/thumbnail.png">
-        <source src="/main.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div className="absolute top-[20%] left-0 right-0 p-4 text-center">
-        <h1 className="font-gowun-dodum text-6xl leading-1.2">10년의 끝에서<br />시작하는 하루</h1>
-      </div>
+    <div
+      className="bg-[#efebe9] bg-repeat"
+      style={{ backgroundImage: "url(/assets/GroovePaper.png)" }}
+    >
+      <audio autoPlay loop>
+        <source src="/assets/song.mp3" type="audio/mpeg" />
+      </audio>
+      <Title />
+      <Greeting />
+      <Gallery />
+      <Location />
+      <Quote />
+      <CongratulatoryMoney />
+      <Share />
+      <footer
+        className="bg-[#D7CCC8] bg-repeat text-center opacity-60 p-4"
+        style={{ backgroundImage: "url(/assets/GroovePaper.png)" }}
+      >
+        ⓒ 2025. EJ n John All rights reserved.
+      </footer>
     </div>
   );
 }
