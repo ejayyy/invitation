@@ -1,39 +1,47 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import Image from "next/image";
 
 const Location = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js";
+  const executeScript = useCallback(() => {
+    const scriptTag = document.createElement("script");
+    const inlineScript = document.createTextNode(`new window.daum.roughmap.Lander({
+      "timestamp" : "1652464367301",
+      "key" : "2a8fe",
+      "mapWidth" : "100%",
+      "mapHeight" : "360"
+    }).render();`);
+    scriptTag.appendChild(inlineScript);
+    document.body.appendChild(scriptTag);
+  }, []);
 
-    const a = "16137cec";
+  const installScript = useCallback(() => {
+    if (window.daum?.roughmap?.cdn) {
+      return;
+    }
+
+    const protocol = window.location.protocol;
+    const cdnIdentifier = "16137cec";
 
     window.daum = window.daum || {};
     window.daum.roughmap = {
-      cdn: a,
-      URL_KEY_DATA_LOAD_PRE: "https://t1.daumcdn.net/roughmap/",
-      url_protocal: "https:",
+      cdn: cdnIdentifier,
+      URL_KEY_DATA_LOAD_PRE: protocol + "//t1.daumcdn.net/roughmap/",
+      url_protocal: protocol,
     };
-    
-    const b = "https://t1.daumcdn.net/kakaomapweb/place/jscss/roughmap/" + a + "/roughmapLander.js";
+
+    const scriptUrl = `${protocol}//t1.daumcdn.net/kakaomapweb/place/jscss/roughmap/${cdnIdentifier}/roughmapLander.js`;
 
     const scriptTag = document.createElement("script");
-    scriptTag.src = b;
+    scriptTag.src = scriptUrl;
+    scriptTag.onload = executeScript;
     document.body.append(scriptTag);
-    scriptTag.onload = () => {
-      const scriptTag = document.createElement("script");
-      const inlineScript = document.createTextNode(`new daum.roughmap.Lander({
-        "timestamp" : "1652464367301",
-        "key" : "2a8fe",
-        "mapWidth" : "100%",
-        "mapHeight" : "360"
-      }).render();`);
-      scriptTag.appendChild(inlineScript);
-      document.getElementById("daumRoughmapContainer1652464367301")?.appendChild(scriptTag);
-    };
-  }, []);
+  }, [executeScript]);
+
+  useEffect(() => {
+    installScript();
+  }, [installScript]);
 
   return (
     <div className="pt-10 w-[70%] mx-auto">
@@ -51,7 +59,7 @@ const Location = () => {
       
       <div
         id="daumRoughmapContainer1652464367301"
-        className="w-full"
+        className="w-full root_daum_roughmap root_daum_roughmap_landing"
       ></div>
 
       <div className="text-sm leading-7 opacity-75 w-full text-center py-10">
