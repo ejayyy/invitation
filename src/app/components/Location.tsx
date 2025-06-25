@@ -45,12 +45,12 @@ const Location = () => {
 
   return (
     <div className="pt-10 w-[70%] mx-auto">
-      <div className="flex items-center text-gray-500 my-8">
-        <hr className="flex-grow border-t border-gray-300" />
+      <div className="flex items-center my-8">
+        <hr className="grow border-t" />
         <p className="text-base font-bold opacity-85 mx-4 text-center">
           오시는 길
         </p>
-        <hr className="flex-grow border-t border-gray-300" />
+        <hr className="grow border-t" />
       </div>
 
       <div className="flex justify-center pb-10">
@@ -63,23 +63,25 @@ const Location = () => {
       ></div>
 
       <div className="text-sm leading-7 opacity-75 w-full text-center py-10">
-        대구 수성구 두산동 888-2번지
+        웨딩그룹위더스 영등포 7층 펠리체홀
         <br />
-        호텔수성 수성스퀘어 3층 피오니홀
+        지하 1 ~ 8층 (2시간 무료 이용)
         <br />
         <br />
         <span className="text-base font-bold opacity-85">버스 이용시</span>
         <br />
         <br />
-        410-1, 401 호텔수성 앞 하차
+        5호선 영등포시장역 4번 출구 (도보 3분)
         <br />
-        수성1-1, 수성3-1, 814 TBC방송국 앞 하차
+        1호선 영등포역 6번 출구 (도보 10분)
         <br />
         <br />
         <span className="text-base font-bold opacity-85">지하철 이용시</span>
         <br />
         <br />
-        3호선 수성못역 하차 (도보 10분)
+        5호선 영등포시장역 4번 출구 (도보 3분)
+        <br />
+        1호선 영등포역 6번 출구 (도보 10분)
       </div>
     </div>
   );

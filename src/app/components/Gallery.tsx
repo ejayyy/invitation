@@ -14,12 +14,12 @@ const images = [
 const Gallery = () => {
   return (
     <div className="pt-10 w-[70%] mx-auto">
-      <div className="flex items-center text-gray-500 mb-8">
-        <hr className="flex-grow border-t border-gray-300" />
+      <div className="flex items-center mb-8">
+        <hr className="grow border-t" />
         <p className="text-base font-bold opacity-85 mx-4 text-center">
           우리의 아름다운 순간
         </p>
-        <hr className="flex-grow border-t border-gray-300" />
+        <hr className="grow border-t" />
       </div>
       <ImageGallery
         items={images}

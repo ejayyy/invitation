@@ -8,7 +8,7 @@ const BRIDE_NAME = "하은지";
 const Title = () => {
   return (
     <div className="w-[70%] overflow-hidden mx-auto">
-      <div className="w-full text-center pt-10 font-medium text-gray-700 animate-fade-in">
+      <div className="w-full text-center pt-10 font-medium animate-fade-in">
         <p className="text-sm opacity-45 mb-4">10년의 끝에서 시작하는 하루</p>
         <p className="text-2xl font-bold opacity-90 mb-4">
           {GROOM_NAME} & {BRIDE_NAME}

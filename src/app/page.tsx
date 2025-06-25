@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <div
-      className="bg-[#efebe9] bg-repeat"
+      className="bg-repeat"
       style={{ backgroundImage: "url(/assets/GroovePaper.png)" }}
     >
       <audio autoPlay loop>
@@ -46,8 +46,7 @@ export default function Home() {
       <CongratulatoryMoney />
       <Share />
       <footer
-        className="bg-[#D7CCC8] bg-repeat text-center opacity-60 p-4"
-        style={{ backgroundImage: "url(/assets/GroovePaper.png)" }}
+        className="py-10 px-2 text-center"
       >
         ⓒ 2025. EJ n John All rights reserved.
       </footer>
