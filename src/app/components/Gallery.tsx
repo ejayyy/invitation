@@ -13,7 +13,7 @@ const images = [
 
 const Gallery = () => {
   return (
-    <div className="pt-10 w-[70%] mx-auto">
+    <section>
       <div className="flex items-center mb-8">
         <hr className="grow border-t" />
         <p className="text-base font-bold opacity-85 mx-4 text-center">
@@ -26,7 +26,7 @@ const Gallery = () => {
         showPlayButton={false}
         showFullscreenButton={false}
       />
-    </div>
+    </section>
   );
 };
 

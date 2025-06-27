@@ -10,7 +10,7 @@ const BRIDE_MOTHER_NAME = "박옥분";
 
 const Greeting = () => {
   return (
-    <div className="py-10 w-[70%] mx-auto">
+    <section>
       <div className="flex items-center my-8">
         <hr className="grow border-t" />
         <p
@@ -47,7 +47,7 @@ const Greeting = () => {
         <br />
         {BRIDE_FATHER_NAME} · {BRIDE_MOTHER_NAME}의 장녀 {BRIDE_NAME}
       </p>
-    </div>
+    </section>
   );
 };
 

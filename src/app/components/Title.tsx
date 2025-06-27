@@ -7,7 +7,7 @@ const BRIDE_NAME = "하은지";
 
 const Title = () => {
   return (
-    <div className="w-[70%] overflow-hidden mx-auto">
+    <section className="overflow-hidden">
       <div className="w-full text-center pt-10 font-medium animate-fade-in">
         <p className="text-sm opacity-45 mb-4">10년의 끝에서 시작하는 하루</p>
         <p className="text-2xl font-bold opacity-90 mb-4">
@@ -22,7 +22,7 @@ const Title = () => {
       <video className="w-full" autoPlay loop muted playsInline>
         <source src="/assets/BackgroundVideo.mp4" type="video/mp4" />
       </video>
-    </div>
+    </section>
   );
 };
 

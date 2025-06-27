@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Quote = () => {
   return (
-    <div className="pt-10 px-10 w-full overflow-hidden mx-auto relative">
+    <section className="px-10 overflow-hidden relative">
       <div className="flex justify-center pb-10" data-aos="fade-up">
         <Image src="/assets/flower1.png" alt="flower" width={22} height={22} />
       </div>
@@ -22,7 +22,7 @@ const Quote = () => {
         <br />
         <br />
       </div>
-    </div>
+    </section>
   );
 };
 

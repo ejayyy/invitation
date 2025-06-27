@@ -31,7 +31,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="container mx-auto px-3">
       <Title />
       <Greeting />
       <Gallery />
@@ -39,10 +39,8 @@ export default function Home() {
       <Quote />
       <CongratulatoryMoney />
       <Share />
-      <footer
-        className="py-10 px-2 text-center"
-      >
-        ⓒ 2025. EJ n John All rights reserved.
+      <footer className="my-10 px-2 text-center">
+        <p>ⓒ 2025. EJ n John All rights reserved.</p>
       </footer>
     </div>
   );

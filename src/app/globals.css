@@ -12,12 +12,11 @@
     0% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
     }
   }
-
-
 }
 
 @theme inline {
@@ -46,6 +45,11 @@ body {
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-300, currentColor);
+  }
+
+  section {
+    margin-top: 3em;
+    margin-bottom: 3em;
   }
 }
 
