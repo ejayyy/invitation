@@ -31,13 +31,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div
-      className="bg-repeat"
-      style={{ backgroundImage: "url(/assets/GroovePaper.png)" }}
-    >
-      <audio autoPlay loop>
-        <source src="/assets/song.mp3" type="audio/mpeg" />
-      </audio>
+    <div>
       <Title />
       <Greeting />
       <Gallery />

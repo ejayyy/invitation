@@ -9,7 +9,6 @@ const Quote = () => {
       </div>
       <div
         className="block mx-auto text-xl text-center leading-9 opacity-75 bg-no-repeat bg-center"
-        style={{ backgroundImage: "url('/assets/Quote.png')" }}
         data-aos="fade-up"
       >
         장담하건대. 세상이 다 겨울이어도
