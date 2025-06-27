@@ -51,7 +51,7 @@ const Share = () => {
 
   return (
     <div className="pt-10 w-full text-center">
-      <div className="flex items-center my-8 w-[70%] mx-auto" data-aos="animate-fade-up">
+      <div className="flex items-center my-8 w-[70%] mx-auto" data-aos="fade-up">
         <hr className="grow border-t" />
         <p className="text-base font-bold opacity-85 mx-4 text-center">
           청첩장 공유하기

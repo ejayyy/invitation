@@ -15,18 +15,18 @@ const Greeting = () => {
         <hr className="grow border-t" />
         <p
           className="text-base font-bold opacity-85 mx-4 text-center"
-          data-aos="animate-fade-up"
+          data-aos="fade-up"
         >
           초대합니다
         </p>
         <hr className="grow border-t" />
       </div>
 
-      <div data-aos="animate-fade-up" className="flex justify-center pb-10">
+      <div data-aos="fade-up" className="flex justify-center pb-10">
         <Image src="/assets/flower1.png" alt="flower" width={22} height={22} />
       </div>
 
-      <p className="text-sm leading-7 opacity-75 mb-4 w-full text-center" data-aos="animate-fade-up">
+      <p className="text-sm leading-7 opacity-75 mb-4 w-full text-center" data-aos="fade-up">
         서로 마주 보며 다져온 사랑을
         <br />
         <br />
@@ -42,7 +42,7 @@ const Greeting = () => {
         앞날을 축복해 주시면 감사하겠습니다.
       </p>
 
-      <p className="text-sm leading-7 opacity-85 w-full text-center" data-aos="animate-fade-up">
+      <p className="text-sm leading-7 opacity-85 w-full text-center" data-aos="fade-up">
         {GROOM_FATHER_NAME} · {GROOM_MOTHER_NAME}의 장남 {GROOM_NAME}
         <br />
         {BRIDE_FATHER_NAME} · {BRIDE_MOTHER_NAME}의 장녀 {BRIDE_NAME}
