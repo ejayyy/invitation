@@ -59,7 +59,7 @@ const Location = () => {
       
       <div
         id="daumRoughmapContainer1750665694551"
-        className="w-full root_daum_roughmap root_daum_roughmap_landing"
+        className="root_daum_roughmap root_daum_roughmap_landing"
       ></div>
 
       <div className="text-sm leading-7 opacity-75 w-full text-center py-10">

@@ -34,9 +34,8 @@ export default function Home() {
     <div className="container mx-auto px-3">
       <Title />
       <Greeting />
-      <Gallery />
       <Location />
-      <Quote />
+      <Gallery />
       <CongratulatoryMoney />
       <Share />
       <footer className="my-10 px-2 text-center">
