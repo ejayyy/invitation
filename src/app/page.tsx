@@ -11,6 +11,8 @@ import Location from "./components/Location";
 import Quote from "./components/Quote";
 import CongratulatoryMoney from "./components/CongratulatoryMoney";
 import Share from "./components/Share";
+import ThemeToggle from "./components/ThemeToggle";
+import { WEDDING_CONFIG } from "./config/wedding";
 
 export default function Home() {
   useEffect(() => {
@@ -39,7 +41,8 @@ export default function Home() {
       <CongratulatoryMoney />
       <Share />
       <footer className="my-10 px-2 text-center">
-        <p>ⓒ 2025. EJ n John All rights reserved.</p>
+        <p className="mb-4">ⓒ 2025. EJ n John All rights reserved.</p>
+        <ThemeToggle />
       </footer>
     </div>
   );
