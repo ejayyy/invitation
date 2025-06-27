@@ -1,12 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
-const GROOM_NAME = "한승헌";
-const GROOM_FATHER_NAME = "한영환";
-const GROOM_MOTHER_NAME = "박주희";
-const BRIDE_NAME = "하은지";
-const BRIDE_FATHER_NAME = "하후동";
-const BRIDE_MOTHER_NAME = "박옥분";
+import { WEDDING_CONFIG } from "../config/wedding";
 
 const Greeting = () => {
   return (
@@ -42,10 +36,10 @@ const Greeting = () => {
         앞날을 축복해 주시면 감사하겠습니다.
       </p>
 
-      <p className="text-sm leading-7 opacity-85 w-full text-center" data-aos="fade-up">
-        {GROOM_FATHER_NAME} · {GROOM_MOTHER_NAME}의 장남 {GROOM_NAME}
+      <p className="leading-7 w-full text-center" data-aos="fade-up">
+        {WEDDING_CONFIG.groom.father.name} · {WEDDING_CONFIG.groom.mother.name}<span className="text-sm opacity-90">의 장남</span> {WEDDING_CONFIG.groom.name}
         <br />
-        {BRIDE_FATHER_NAME} · {BRIDE_MOTHER_NAME}의 장녀 {BRIDE_NAME}
+        {WEDDING_CONFIG.bride.father.name} · {WEDDING_CONFIG.bride.mother.name}<span className="text-sm opacity-90">의 장녀</span> {WEDDING_CONFIG.bride.name}
       </p>
     </section>
   );

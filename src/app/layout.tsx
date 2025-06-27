@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Serif_KR } from "next/font/google";
 import "./globals.css";
+import { WEDDING_CONFIG } from "./config/wedding";
 
 const notoSerifKr = Noto_Serif_KR({
   subsets: ["latin"],
@@ -8,7 +9,7 @@ const notoSerifKr = Noto_Serif_KR({
 });
 
 export const metadata: Metadata = {
-  title: "한승헌, 하은지 청첩장",
+  title: `${WEDDING_CONFIG.groom.name}❤${WEDDING_CONFIG.bride.name}`,
   description: "두 손을 맞잡고 걸어가는 새로운 여정에 여러분을 초대합니다",
 };
 

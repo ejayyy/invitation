@@ -1,17 +1,15 @@
 "use client";
 
 import React, { useEffect } from "react";
+import Image from "next/image";
+import { WEDDING_CONFIG } from "../config/wedding";
 
-const KAKAOTALK_API_TOKEN = "f4869301e40d26668570435f63ec4e38";
-const KAKAOTALK_SHARE_IMAGE = "/assets/Gallery_Photo_1.webp";
 const WEDDING_INVITATION_URL = typeof window !== 'undefined' ? window.location.href : '';
-const GROOM_NAME = "한승헌";
-const BRIDE_NAME = "하은지";
 
 const Share = () => {
   useEffect(() => {
     if (window.Kakao && !window.Kakao.isInitialized()) {
-      window.Kakao.init(KAKAOTALK_API_TOKEN);
+      window.Kakao.init(WEDDING_CONFIG.kakaoTalk.apiToken);
     }
   }, []);
 
@@ -20,9 +18,9 @@ const Share = () => {
       window.Kakao.Link.sendDefault({
         objectType: "feed",
         content: {
-          title: `${GROOM_NAME}❤${BRIDE_NAME} 결혼식에 초대합니다`,
+          title: `${WEDDING_CONFIG.groom.name}❤${WEDDING_CONFIG.bride.name} 결혼식에 초대합니다`,
           description: "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요🤵👰",
-          imageUrl: `${window.location.origin}${KAKAOTALK_SHARE_IMAGE}`,
+          imageUrl: `${window.location.origin}${WEDDING_CONFIG.kakaoTalk.shareImage}`,
           link: {
             mobileWebUrl: WEDDING_INVITATION_URL,
             webUrl: WEDDING_INVITATION_URL,

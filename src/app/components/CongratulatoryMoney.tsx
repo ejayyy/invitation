@@ -2,20 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-
-const GROOM_NAME = "한승헌";
-const GROOM_ACCOUNT_NUMBER = "카카오 3333-01-1502699";
-const GROOM_FATHER_NAME = "한영환";
-const GROOM_FATHER_ACCOUNT_NUMBER = "우리은행 213-239541-02-101";
-const GROOM_MOTHER_NAME = "박주희";
-const GROOM_MOTHER_ACCOUNT_NUMBER = "우리은행 1002-246-355304";
-
-const BRIDE_NAME = "하은지";
-const BRIDE_ACCOUNT_NUMBER = "하나은행 355-910451-58907";
-const BRIDE_FATHER_NAME = "하후동";
-const BRIDE_FATHER_ACCOUNT_NUMBER = "우리은행 1005-903-884007";
-const BRIDE_MOTHER_NAME = "박옥분";
-const BRIDE_MOTHER_ACCOUNT_NUMBER = "우리은행 1005-403-217198";
+import { WEDDING_CONFIG } from "../config/wedding";
 
 const AccountAccordion = ({ title, accounts, isOpen, onToggle }: {
   title: string,
@@ -77,15 +64,15 @@ const CongratulatoryMoney = () => {
   const [brideOpen, setBrideOpen] = useState(false);
 
   const groomAccounts = [
-    { name: `부: ${GROOM_FATHER_NAME}`, number: GROOM_FATHER_ACCOUNT_NUMBER },
-    { name: `모: ${GROOM_MOTHER_NAME}`, number: GROOM_MOTHER_ACCOUNT_NUMBER },
-    { name: `신랑: ${GROOM_NAME}`, number: GROOM_ACCOUNT_NUMBER },
+    { name: `부: ${WEDDING_CONFIG.groom.father.name}`, number: WEDDING_CONFIG.groom.father.account },
+    { name: `모: ${WEDDING_CONFIG.groom.mother.name}`, number: WEDDING_CONFIG.groom.mother.account },
+    { name: `신랑: ${WEDDING_CONFIG.groom.name}`, number: WEDDING_CONFIG.groom.account },
   ];
 
   const brideAccounts = [
-    { name: `부: ${BRIDE_FATHER_NAME}`, number: BRIDE_FATHER_ACCOUNT_NUMBER },
-    { name: `모: ${BRIDE_MOTHER_NAME}`, number: BRIDE_MOTHER_ACCOUNT_NUMBER },
-    { name: `신부: ${BRIDE_NAME}`, number: BRIDE_ACCOUNT_NUMBER },
+    { name: `부: ${WEDDING_CONFIG.bride.father.name}`, number: WEDDING_CONFIG.bride.father.account },
+    { name: `모: ${WEDDING_CONFIG.bride.mother.name}`, number: WEDDING_CONFIG.bride.mother.account },
+    { name: `신부: ${WEDDING_CONFIG.bride.name}`, number: WEDDING_CONFIG.bride.account },
   ];
 
   return (
