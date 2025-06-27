@@ -64,24 +64,24 @@ const Location = () => {
 
       <div className="w-full text-center py-10">
         <div>
-          <p className="font-bold">자차</p>
+          <p className="font-bold mb-1">자차</p>
           <p className="text-sm">서울 영등포구 영중로 55</p>
           <p className="text-sm">지하 1 ~ 8층 (2시간 무료)</p>
         </div>
         <div className="my-8">
-          <p className="font-bold">버스</p>
+          <p className="font-bold mb-1">버스</p>
           <p className="text-sm mb-2">영등포시장역 4번 출구 정류장</p>
-          <p className="text-sm"><span className="text-xs bg-[#7284f6] p-px rounded mr-1">간선</span>605, 661, 760, 761</p>
-          <p className="text-sm"><span className="text-xs bg-[#47af1b] p-px rounded mr-1">지선</span>5616, 5714, 6514</p>
-          <p className="text-sm"><span className="text-xs bg-[#00afbd] p-px rounded mr-1">일반</span>5, 60</p>
-          <p className="text-sm"><span className="text-xs bg-[#ff451e] p-px rounded mr-1">광역</span>9707</p>
-          <p className="text-sm"><span className="text-xs bg-[#f65b3b] p-px rounded mr-1">직행</span>1082, 1500, 7602, 8000, 9030, 9030-1, G6002</p>
-          <p className="text-sm"><span className="text-xs bg-[#2391ee] p-px rounded mr-1">좌석</span>700, 830</p>
+          <p className="text-sm"><span className="text-white text-xs bg-[#7284f6] p-px rounded mr-1">간선</span>605, 661, 760, 761</p>
+          <p className="text-sm"><span className="text-white text-xs bg-[#47af1b] p-px rounded mr-1">지선</span>5616, 5714, 6514</p>
+          <p className="text-sm"><span className="text-white text-xs bg-[#00afbd] p-px rounded mr-1">일반</span>5, 60</p>
+          <p className="text-sm"><span className="text-white text-xs bg-[#ff451e] p-px rounded mr-1">광역</span>9707</p>
+          <p className="text-sm"><span className="text-white text-xs bg-[#f65b3b] p-px rounded mr-1">직행</span>1082, 1500, 7602, 8000, 9030, 9030-1, G6002</p>
+          <p className="text-sm"><span className="text-white text-xs bg-[#2391ee] p-px rounded mr-1">좌석</span>700, 830</p>
         </div>
         <div>
-          <p className="font-bold">지하철</p>
-          <p className="text-sm">5호선 영등포시장역 4번 출구 (도보 3분)</p>
-          <p className="text-sm">1호선 영등포역 6번 출구 (도보 10분)</p>
+          <p className="font-bold mb-1">지하철</p>
+          <p className="text-sm"><span className="text-white text-xs bg-[#8b50a4] p-px rounded mr-1">5호선</span>영등포시장역 4번 출구 (도보 3분)</p>
+          <p className="text-sm"><span className="text-white text-xs bg-[#0d3692] p-px rounded mr-1">1호선</span>영등포역 6번 출구 (도보 10분)</p>
         </div>
       </div>
     </section>

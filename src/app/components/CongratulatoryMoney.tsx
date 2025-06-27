@@ -25,9 +25,7 @@ const CongratulatoryMoney = () => {
     <div className="pt-10 pb-4 text-center">
       <div className="flex items-center my-8" data-aos="fade-up">
         <hr className="grow border-t" />
-        <p className="text-base font-bold mx-4 text-center">
-          축하의 마음을 전하세요
-        </p>
+        <p className="text-base font-bold mx-4 text-center">마음 전하실 곳</p>
         <hr className="grow border-t" />
       </div>
 
@@ -35,9 +33,7 @@ const CongratulatoryMoney = () => {
         <Image src="/assets/flower3.png" alt="flower" width={22} height={22} />
       </div>
 
-      <p className="text-sm leading-7 mb-10" data-aos="fade-up">
-        축하의 마음을 담아 축의금을 전달해 보세요.
-      </p>
+      <p className="text-sm mb-10" data-aos="fade-up">따뜻한 마음 전해주시는 모든 분들께 감사드립니다.</p>
 
       <div className="max-w-2xl mx-auto">
         <AccountAccordion
