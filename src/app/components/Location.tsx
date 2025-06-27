@@ -10,7 +10,7 @@ const Location = () => {
       "timestamp" : "1750665694551",
       "key" : "42qg6pmn4ri",
       "mapWidth" : "100%",
-      "mapHeight" : "600"
+      "mapHeight" : "250"
     }).render();`);
     scriptTag.appendChild(inlineScript);
     document.body.appendChild(scriptTag);
