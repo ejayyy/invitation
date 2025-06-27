@@ -10,15 +10,15 @@ const CongratulatoryMoney = () => {
   const [brideOpen, setBrideOpen] = useState(false);
 
   const groomAccounts = [
-    { name: `부: ${WEDDING_CONFIG.groom.father.name}`, number: WEDDING_CONFIG.groom.father.account },
-    { name: `모: ${WEDDING_CONFIG.groom.mother.name}`, number: WEDDING_CONFIG.groom.mother.account },
-    { name: `신랑: ${WEDDING_CONFIG.groom.name}`, number: WEDDING_CONFIG.groom.account },
+    { name: `부: ${WEDDING_CONFIG.groom.father.name}`, number: WEDDING_CONFIG.groom.father.account, bank: WEDDING_CONFIG.groom.father.bank },
+    { name: `모: ${WEDDING_CONFIG.groom.mother.name}`, number: WEDDING_CONFIG.groom.mother.account, bank: WEDDING_CONFIG.groom.mother.bank },
+    { name: `신랑: ${WEDDING_CONFIG.groom.name}`, number: WEDDING_CONFIG.groom.account, bank: WEDDING_CONFIG.groom.bank },
   ];
 
   const brideAccounts = [
-    { name: `부: ${WEDDING_CONFIG.bride.father.name}`, number: WEDDING_CONFIG.bride.father.account },
-    { name: `모: ${WEDDING_CONFIG.bride.mother.name}`, number: WEDDING_CONFIG.bride.mother.account },
-    { name: `신부: ${WEDDING_CONFIG.bride.name}`, number: WEDDING_CONFIG.bride.account },
+    { name: `부: ${WEDDING_CONFIG.bride.father.name}`, number: WEDDING_CONFIG.bride.father.account, bank: WEDDING_CONFIG.bride.father.bank },
+    { name: `모: ${WEDDING_CONFIG.bride.mother.name}`, number: WEDDING_CONFIG.bride.mother.account, bank: WEDDING_CONFIG.bride.mother.bank },
+    { name: `신부: ${WEDDING_CONFIG.bride.name}`, number: WEDDING_CONFIG.bride.account, bank: WEDDING_CONFIG.bride.bank },
   ];
 
   return (
