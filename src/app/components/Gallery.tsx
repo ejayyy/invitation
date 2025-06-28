@@ -3,12 +3,11 @@ import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
 const images = [
-  { original: "/assets/Gallery_Photo_1.webp", thumbnail: "/assets/Gallery_Photo_1.webp" },
-  { original: "/assets/Gallery_Photo_2.webp", thumbnail: "/assets/Gallery_Photo_2.webp" },
-  { original: "/assets/Gallery_Photo_3.webp", thumbnail: "/assets/Gallery_Photo_3.webp" },
-  { original: "/assets/Gallery_Photo_4.webp", thumbnail: "/assets/Gallery_Photo_4.webp" },
-  { original: "/assets/Gallery_Photo_5.webp", thumbnail: "/assets/Gallery_Photo_5.webp" },
-  { original: "/assets/Gallery_Photo_6.webp", thumbnail: "/assets/Gallery_Photo_6.webp" },
+  { original: "/assets/gallery01.jpg", thumbnail: "/thumbnails/gallery01.jpg" },
+  { original: "/assets/gallery02.jpg", thumbnail: "/thumbnails/gallery02.jpg" },
+  { original: "/assets/gallery03.jpg", thumbnail: "/thumbnails/gallery03.jpg" },
+  { original: "/assets/gallery04.jpg", thumbnail: "/thumbnails/gallery04.jpg" },
+  { original: "/assets/gallery05.jpg", thumbnail: "/thumbnails/gallery05.jpg" },
 ];
 
 const Gallery = () => {
@@ -21,11 +20,14 @@ const Gallery = () => {
         </p>
         <hr className="grow border-t" />
       </div>
-      <ImageGallery
-        items={images}
-        showPlayButton={false}
-        showFullscreenButton={false}
-      />
+      <div className="max-w-4xl mx-auto">
+        <ImageGallery
+          items={images}
+          showNav={false}
+          showPlayButton={false}
+          showFullscreenButton={false}
+        />
+      </div>
     </section>
   );
 };
