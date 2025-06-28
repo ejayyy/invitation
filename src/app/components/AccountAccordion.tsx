@@ -44,7 +44,7 @@ const AccountAccordion: React.FC<AccountAccordionProps> = ({ title, accounts, is
                     onClick={() => handleCopy(acc.number)}
                     className="w-full bg-neutral-200 hover:bg-neutral-300 text-neutral-800 font-semibold py-2 px-3 rounded-sm text-sm whitespace-normal text-left break-all"
                   >
-                    <Image src={`/assets/bank/${acc.bank}.png`} alt={acc.bank} width={16} height={16} className="inline" />
+                    <Image src={`/bank/${acc.bank}.png`} alt={acc.bank} width={16} height={16} className="inline" />
                     <span className="text-xs ml-1 mr-2">{acc.bank}</span>
                     {acc.number}
                   </button>
