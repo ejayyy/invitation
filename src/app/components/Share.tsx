@@ -49,9 +49,7 @@ const Share = () => {
     <section className="text-center">
       <div className="flex items-center my-8" data-aos="fade-up">
         <hr className="grow border-t" />
-        <p className="text-base font-bold opacity-85 mx-4 text-center">
-          청첩장 공유하기
-        </p>
+        <p className="text-base font-bold mx-4 text-center">🎙️ 청첩장 공유</p>
         <hr className="grow border-t" />
       </div>
 

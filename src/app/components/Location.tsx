@@ -47,16 +47,9 @@ const Location = () => {
     <section>
       <div className="flex items-center my-8">
         <hr className="grow border-t" />
-        <p className="text-base font-bold opacity-85 mx-4 text-center">
-          오시는 길
-        </p>
+        <p className="text-base font-bold mx-4 text-center">🚗 오시는 길</p>
         <hr className="grow border-t" />
       </div>
-
-      <div className="flex justify-center pb-10">
-        <Image src="/assets/flower2.png" alt="flower" width={22} height={22} />
-      </div>
-
       <div
         id="daumRoughmapContainer1750665694551"
         className="root_daum_roughmap root_daum_roughmap_landing"
@@ -64,7 +57,7 @@ const Location = () => {
 
       <div className="w-full text-center py-10">
         <div>
-          <p className="font-bold mb-1">자차</p>
+          <p className="font-bold mb-1">차량</p>
           <p className="text-sm">서울 영등포구 영중로 55</p>
           <p className="text-sm">지하 1 ~ 8층 (2시간 무료)</p>
         </div>

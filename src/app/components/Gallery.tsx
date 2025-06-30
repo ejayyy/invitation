@@ -15,9 +15,7 @@ const Gallery = () => {
     <section>
       <div className="flex items-center mb-8">
         <hr className="grow border-t" />
-        <p className="text-base font-bold opacity-85 mx-4 text-center">
-          우리의 아름다운 순간
-        </p>
+        <p className="text-base font-bold mx-4 text-center">📷 함께한 날의 기록</p>
         <hr className="grow border-t" />
       </div>
       <div className="max-w-4xl mx-auto">

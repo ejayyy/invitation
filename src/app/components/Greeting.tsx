@@ -13,11 +13,6 @@ const Greeting = () => {
         >인사</p>
         <hr className="grow border-t" />
       </div>
-
-      <div data-aos="fade-up" className="flex justify-center pb-10">
-        <Image src="/assets/flower1.png" alt="flower" width={22} height={22} />
-      </div>
-
       <p className="text-sm mb-4 w-full text-center" data-aos="fade-up">두 손을 맞잡고 걸어가는 새로운 여정에 여러분을 초대합니다</p>
 
       <p className="w-full text-center" data-aos="fade-up">
