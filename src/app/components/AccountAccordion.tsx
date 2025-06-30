@@ -1,16 +1,25 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 
 interface AccountAccordionProps {
   title: string;
-  accounts: { name: string; number: string; bank: string; }[];
+  accounts: { title: string; name: string; number: string; bank: string; }[];
   isOpen: boolean;
   onToggle: () => void;
 }
 
 const AccountAccordion: React.FC<AccountAccordionProps> = ({ title, accounts, isOpen, onToggle }) => {
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [contentHeight, setContentHeight] = useState(0);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setContentHeight(isOpen ? contentRef.current.scrollHeight : 0);
+    }
+  }, [isOpen, accounts]);
+
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text).then(() => {
       alert("계좌번호가 복사되었습니다.");
@@ -18,14 +27,14 @@ const AccountAccordion: React.FC<AccountAccordionProps> = ({ title, accounts, is
   };
 
   return (
-    <div className="border rounded-lg mb-4 overflow-hidden">
+    <div className="mb-4 overflow-hidden w-full border border-neutral-200 rounded-sm">
       <button
         onClick={onToggle}
-        className="w-full p-4 text-left hover:opacity-80 transition-colors flex justify-between items-center"
+        className="w-full p-4 transition-colors flex justify-between items-center border-neutral-200 rounded-sm hover:bg-neutral-100"
       >
         <span className="font-semibold text-lg">{title}</span>
         <svg
-          className={`w-5 h-5 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -33,30 +42,39 @@ const AccountAccordion: React.FC<AccountAccordionProps> = ({ title, accounts, is
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      {isOpen && (
-        <div className="p-4">
+
+      <div
+        className="overflow-hidden transition-all duration-300 ease-in-out"
+        style={{ height: `${contentHeight}px` }}
+      >
+        <div ref={contentRef} className="p-4">
           <div className="flex flex-col gap-3">
             {accounts.map((acc, index) => (
-              <div key={index} className="grid grid-cols-1 md:grid-cols-3 items-center gap-2">
-                <span className="text-left text-sm font-medium">{acc.name}</span>
-                <div className="md:col-span-2">
-                  <button
-                    onClick={() => handleCopy(acc.number)}
-                    className="w-full bg-neutral-200 hover:bg-neutral-300 text-neutral-800 font-semibold py-2 px-3 rounded-sm text-sm whitespace-normal text-left break-all"
-                  >
-                    <Image src={`/bank/${acc.bank}.png`} alt={acc.bank} width={16} height={16} className="inline" />
-                    <span className="text-xs ml-1 mr-2">{acc.bank}</span>
-                    {acc.number}
-                  </button>
+              <div
+                key={index}
+                className="flex items-center justify-between animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="flex items-center gap-3">
+                  <span className="font-bold">{acc.title}</span>
+                  <span className="text-sm font-medium">{acc.name}</span>
                 </div>
+                <button
+                  onClick={() => handleCopy(`${acc.bank} ${acc.number}`)}
+                  className="bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-semibold py-2 px-3 rounded-sm text-sm inline-flex items-center basis-2/3 transition-colors duration-200"
+                >
+                  <Image src={`/bank/${acc.bank}.png`} alt={acc.bank} width={14} height={14} />
+                  <span className="text-xs ml-1 mr-2">{acc.bank}</span>
+                  {acc.number}
+                </button>
               </div>
             ))}
           </div>
-          <p className="text-xs text-neutral-500 mt-4">
+          <p className="text-xs text-neutral-600 mt-4 text-right font-medium animate-fade-in" style={{ animationDelay: '300ms' }}>
             계좌번호 클릭 시 복사됩니다.
           </p>
         </div>
-      )}
+      </div>
     </div>
   );
 };
