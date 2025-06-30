@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Noto_Serif_KR } from "next/font/google";
+import { Gowun_Dodum, Noto_Serif_KR } from "next/font/google";
 import "./globals.css";
 import { WEDDING_CONFIG } from "./config/wedding";
 import { ThemeProvider } from "./context/ThemeContext";
 
-const notoSerifKr = Noto_Serif_KR({
+const gowunDodum = Gowun_Dodum({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning>
-      <body className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <body className={`${gowunDodum.className} bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300`}>
         <ThemeProvider>
           {children}
         </ThemeProvider>
