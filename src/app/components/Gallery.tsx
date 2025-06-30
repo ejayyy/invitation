@@ -13,9 +13,9 @@ const images = [
 const Gallery = () => {
   return (
     <section>
-      <div className="flex items-center mb-8" data-aos="fade-up">
+      <div className="flex items-center mb-8">
         <hr className="grow border-t" />
-        <p className="text-base font-bold mx-4 text-center">📷 함께한 날의 기록</p>
+        <p className="text-base font-bold mx-4 text-center" data-aos="fade-up">📷 함께한 날의 기록</p>
         <hr className="grow border-t" />
       </div>
       <div className="max-w-4xl mx-auto" data-aos="fade-up">

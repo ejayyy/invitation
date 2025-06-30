@@ -22,9 +22,9 @@ const CongratulatoryMoney = () => {
 
   return (
     <section>
-      <div className="flex items-center my-8 text-center" data-aos="fade-up">
+      <div className="flex items-center my-8">
         <hr className="grow border-t" />
-        <p className="text-base font-bold mx-4">💌 마음 전하실 곳</p>
+        <p className="text-base font-bold mx-4 text-center" data-aos="fade-up">💌 마음 전하실 곳</p>
         <hr className="grow border-t" />
       </div>
 

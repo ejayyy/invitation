@@ -76,14 +76,15 @@ export default function Share() {
     }
 
     const currentUrl = window.location.href;
-    const shareText = `${WEDDING_CONFIG.groom.name}❤${WEDDING_CONFIG.bride.name}의 청첩장`;
 
     try {
       window.Kakao.Share.sendDefault({
-        objectType: 'feed',
+        objectType: 'location',
+        address: WEDDING_CONFIG.address,
+        addressTitle: '예식장 위치',
         content: {
-          title: `${WEDDING_CONFIG.groom.name}❤${WEDDING_CONFIG.bride.name}`,
-          description: `${WEDDING_CONFIG.date}\n${WEDDING_CONFIG.location}\n\n${shareText}`,
+          title: `🎉 ${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name} 🎉`,
+          description: `${WEDDING_CONFIG.date}, 영등포에서 인사드립니다🤗`,
           imageUrl: `${currentUrl}${WEDDING_CONFIG.kakaoTalk.shareImage}`,
           link: {
             mobileWebUrl: currentUrl,
@@ -92,7 +93,7 @@ export default function Share() {
         },
         buttons: [
           {
-            title: '청첩장 보기',
+            title: '초대장 열기',
             link: {
               mobileWebUrl: currentUrl,
               webUrl: currentUrl,
@@ -108,9 +109,9 @@ export default function Share() {
 
   return (
     <section className="text-center">
-      <div className="flex items-center my-8" data-aos="fade-up">
+      <div className="flex items-center my-8">
         <hr className="grow border-t" />
-        <p className="text-base font-bold mx-4 text-center">🎉 청첩장 공유</p>
+        <p className="text-base font-bold mx-4 text-center" data-aos="fade-up">🎊 청첩장 공유</p>
         <hr className="grow border-t" />
       </div>
 

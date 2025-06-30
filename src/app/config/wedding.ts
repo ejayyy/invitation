@@ -1,8 +1,10 @@
 // Wedding Configuration
 export const WEDDING_CONFIG = {
   // Wedding Information
-  date: "2025년 9월 21일 일요일 오전 10시",
+  date: "2025년 9월 21일 일요일",
+  time: "오전 10시",
   location: "웨딩그룹위더스 영등포 7층 펠리체홀",
+  address: "서울 영등포구 영중로 55",
 
   // Groom Information
   groom: {

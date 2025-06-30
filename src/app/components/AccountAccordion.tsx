@@ -30,9 +30,9 @@ const AccountAccordion: React.FC<AccountAccordionProps> = ({ title, accounts, is
     <div className="mb-4 w-full border border-neutral-200 dark:border-neutral-700 rounded-sm">
       <button
         onClick={onToggle}
-        className="w-full p-4 flex justify-between items-center hover:bg-neutral-100 dark:hover:bg-neutral-900"
+        className="w-full p-3 flex justify-between items-center hover:bg-neutral-100 dark:hover:bg-neutral-900"
       >
-        <span className="font-semibold text-lg">{title}</span>
+        <span className="font-semibold">{title}</span>
         <svg
           className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
@@ -47,7 +47,7 @@ const AccountAccordion: React.FC<AccountAccordionProps> = ({ title, accounts, is
         className="overflow-hidden transition-all duration-300"
         style={{ height: `${contentHeight}px` }}
       >
-        <div ref={contentRef} className="p-4">
+        <div ref={contentRef} className="p-3">
           <div className="flex flex-col gap-3">
             {accounts.map((acc, index) => (
               <div key={index} className="flex items-center justify-between">
@@ -66,7 +66,7 @@ const AccountAccordion: React.FC<AccountAccordionProps> = ({ title, accounts, is
               </div>
             ))}
           </div>
-          <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-4 text-right">
+          <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-2 text-right">
             계좌번호 클릭 시 복사됩니다.
           </p>
         </div>

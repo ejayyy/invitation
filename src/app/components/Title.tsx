@@ -13,7 +13,7 @@ const Title = () => {
           <p className="text-3xl font-bold">{WEDDING_CONFIG.groom.name} & {WEDDING_CONFIG.bride.name}</p>
         </div>
         <p className="text-md">
-          {WEDDING_CONFIG.date}
+          {WEDDING_CONFIG.date}, {WEDDING_CONFIG.time}
           <br />
           {WEDDING_CONFIG.location}
         </p>

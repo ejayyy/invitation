@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useCallback } from "react";
+import { WEDDING_CONFIG } from "../config/wedding";
 
 const Location = () => {
   const executeScript = useCallback(() => {
@@ -44,9 +45,9 @@ const Location = () => {
 
   return (
     <section>
-      <div className="flex items-center my-8" data-aos="fade-up">
+      <div className="flex items-center my-8">
         <hr className="grow border-t" />
-        <p className="text-base font-bold mx-4 text-center">🚗 오시는 길</p>
+        <p className="text-base font-bold mx-4 text-center" data-aos="fade-up">🚗 오시는 길</p>
         <hr className="grow border-t" />
       </div>
       <div
@@ -57,7 +58,7 @@ const Location = () => {
       <div className="w-full text-center pt-10" data-aos="fade-up">
         <div>
           <p className="font-bold mb-1">차량</p>
-          <p className="text-sm">서울 영등포구 영중로 55</p>
+          <p className="text-sm">{WEDDING_CONFIG.address}</p>
           <p className="text-sm">지하 1 ~ 8층 (2시간 무료)</p>
         </div>
         <div className="my-8">
