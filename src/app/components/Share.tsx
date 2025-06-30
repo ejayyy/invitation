@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Image from "next/image";
 import { WEDDING_CONFIG } from "../config/wedding";
 
 const WEDDING_INVITATION_URL = typeof window !== 'undefined' ? window.location.href : '';

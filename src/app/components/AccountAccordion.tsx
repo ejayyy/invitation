@@ -27,14 +27,14 @@ const AccountAccordion: React.FC<AccountAccordionProps> = ({ title, accounts, is
   };
 
   return (
-    <div className="mb-4 overflow-hidden w-full border border-neutral-200 rounded-sm">
+    <div className="mb-4 w-full border border-neutral-200 dark:border-neutral-700 rounded-sm">
       <button
         onClick={onToggle}
-        className="w-full p-4 transition-colors flex justify-between items-center border-neutral-200 rounded-sm hover:bg-neutral-100"
+        className="w-full p-4 flex justify-between items-center hover:bg-neutral-100 dark:hover:bg-neutral-900"
       >
         <span className="font-semibold text-lg">{title}</span>
         <svg
-          className={`w-5 h-5 transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -44,24 +44,20 @@ const AccountAccordion: React.FC<AccountAccordionProps> = ({ title, accounts, is
       </button>
 
       <div
-        className="overflow-hidden transition-all duration-300 ease-in-out"
+        className="overflow-hidden transition-all duration-300"
         style={{ height: `${contentHeight}px` }}
       >
         <div ref={contentRef} className="p-4">
           <div className="flex flex-col gap-3">
             {accounts.map((acc, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-between animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+              <div key={index} className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span className="font-bold">{acc.title}</span>
                   <span className="text-sm font-medium">{acc.name}</span>
                 </div>
                 <button
                   onClick={() => handleCopy(`${acc.bank} ${acc.number}`)}
-                  className="bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-semibold py-2 px-3 rounded-sm text-sm inline-flex items-center basis-2/3 transition-colors duration-200"
+                  className="bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 py-2 px-3 rounded-sm text-sm flex items-center basis-2/3"
                 >
                   <Image src={`/bank/${acc.bank}.png`} alt={acc.bank} width={14} height={14} />
                   <span className="text-xs ml-1 mr-2">{acc.bank}</span>
@@ -70,7 +66,7 @@ const AccountAccordion: React.FC<AccountAccordionProps> = ({ title, accounts, is
               </div>
             ))}
           </div>
-          <p className="text-xs text-neutral-600 mt-4 text-right font-medium animate-fade-in" style={{ animationDelay: '300ms' }}>
+          <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-4 text-right">
             계좌번호 클릭 시 복사됩니다.
           </p>
         </div>

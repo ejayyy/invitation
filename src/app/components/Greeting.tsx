@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { WEDDING_CONFIG } from "../config/wedding";
 
 const Greeting = () => {

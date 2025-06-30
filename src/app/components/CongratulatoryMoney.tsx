@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { WEDDING_CONFIG } from "../config/wedding";
 import AccountAccordion from "./AccountAccordion";
 
@@ -22,7 +21,7 @@ const CongratulatoryMoney = () => {
   ];
 
   return (
-    <div className="pt-10 pb-4">
+    <section>
       <div className="flex items-center my-8 text-center" data-aos="fade-up">
         <hr className="grow border-t" />
         <p className="text-base font-bold mx-4">💌 마음 전하실 곳</p>
@@ -46,7 +45,7 @@ const CongratulatoryMoney = () => {
           onToggle={() => setBrideOpen(!brideOpen)}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useCallback } from "react";
-import Image from "next/image";
 
 const Location = () => {
   const executeScript = useCallback(() => {
@@ -45,7 +44,7 @@ const Location = () => {
 
   return (
     <section>
-      <div className="flex items-center my-8">
+      <div className="flex items-center my-8" data-aos="fade-up">
         <hr className="grow border-t" />
         <p className="text-base font-bold mx-4 text-center">🚗 오시는 길</p>
         <hr className="grow border-t" />
@@ -55,7 +54,7 @@ const Location = () => {
         className="root_daum_roughmap root_daum_roughmap_landing"
       ></div>
 
-      <div className="w-full text-center py-10">
+      <div className="w-full text-center pt-10" data-aos="fade-up">
         <div>
           <p className="font-bold mb-1">차량</p>
           <p className="text-sm">서울 영등포구 영중로 55</p>
