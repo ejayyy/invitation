@@ -4,6 +4,7 @@ import "./globals.css";
 import { WEDDING_CONFIG } from "./config/wedding";
 import { ThemeProvider } from "./context/ThemeContext";
 import Script from "next/script";
+import type { Viewport } from 'next'
 
 const gowunDodum = Gowun_Dodum({
   subsets: ["latin"],
@@ -25,7 +26,13 @@ export const metadata: Metadata = {
   description: "두 손을 맞잡고 걸어가는 새로운 여정에 여러분을 초대합니다",
   creator: "EJ n John",
   applicationName: "EJ n John Invitation",
-  viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
