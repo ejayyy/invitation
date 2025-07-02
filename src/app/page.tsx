@@ -23,10 +23,46 @@ export default function Home() {
     script.src = "https://developers.kakao.com/sdk/js/kakao.min.js";
     document.body.appendChild(script);
 
+    // 줌 방지 이벤트 리스너
+    const preventZoom = (e: Event) => {
+      if ((e as any).touches && (e as any).touches.length > 1) {
+        e.preventDefault();
+      }
+    };
+
+    const preventDoubleClickZoom = (e: Event) => {
+      e.preventDefault();
+    };
+
+    const preventKeyboardZoom = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '0')) {
+        e.preventDefault();
+      }
+    };
+
+    const preventWheelZoom = (e: WheelEvent) => {
+      if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+      }
+    };
+
+    // 이벤트 리스너 등록
+    document.addEventListener('touchstart', preventZoom, { passive: false });
+    document.addEventListener('touchmove', preventZoom, { passive: false });
+    document.addEventListener('dblclick', preventDoubleClickZoom);
+    document.addEventListener('keydown', preventKeyboardZoom);
+    document.addEventListener('wheel', preventWheelZoom, { passive: false });
+
     return () => {
       if (document.body.contains(script)) {
         document.body.removeChild(script);
       }
+      // 이벤트 리스너 제거
+      document.removeEventListener('touchstart', preventZoom);
+      document.removeEventListener('touchmove', preventZoom);
+      document.removeEventListener('dblclick', preventDoubleClickZoom);
+      document.removeEventListener('keydown', preventKeyboardZoom);
+      document.removeEventListener('wheel', preventWheelZoom);
     };
   }, []);
 
