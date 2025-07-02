@@ -49,9 +49,21 @@ body {
   }
 
   section {
-    margin-top: 5em;
-    margin-bottom: 5em;
+    @apply my-15;
   }
+
+  .title {
+    @apply text-base mx-4 text-center;
+  }
+
+  .icon-container {
+    @apply flex flex-col items-center gap-1;
+  }
+
+  .icon-container span {
+    @apply text-white text-xs p-px rounded mr-1;
+  }
+
 }
 
 /* KakaoMap */

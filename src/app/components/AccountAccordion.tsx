@@ -66,7 +66,7 @@ const AccountAccordion: React.FC<AccountAccordionProps> = ({ title, accounts, is
               </div>
             ))}
           </div>
-          <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-2 text-right">
+          <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-2 text-right font-(family-name:--font-ibm-plex-sans-kr)">
             계좌번호 클릭 시 복사됩니다.
           </p>
         </div>

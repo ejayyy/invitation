@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Gowun_Dodum, Noto_Serif_KR } from "next/font/google";
+import { Gowun_Dodum, IBM_Plex_Sans_KR } from "next/font/google";
 import "./globals.css";
 import { WEDDING_CONFIG } from "./config/wedding";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -8,6 +8,16 @@ import Script from "next/script";
 const gowunDodum = Gowun_Dodum({
   subsets: ["latin"],
   weight: "400",
+  display: "swap",
+  preload: true,
+});
+
+const ibmPlexSansKR = IBM_Plex_Sans_KR({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  variable: "--font-ibm-plex-sans-kr",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -42,7 +52,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${gowunDodum.className} bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300`}>
+      <body className={`${gowunDodum.className} ${ibmPlexSansKR.variable} bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300`}>
         <ThemeProvider>
           {children}
         </ThemeProvider>

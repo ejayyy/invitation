@@ -8,11 +8,9 @@ import Title from "./components/Title";
 import Greeting from "./components/Greeting";
 import Gallery from "./components/Gallery";
 import Location from "./components/Location";
-import Quote from "./components/Quote";
 import CongratulatoryMoney from "./components/CongratulatoryMoney";
 import Share from "./components/Share";
 import ThemeToggle from "./components/ThemeToggle";
-import { WEDDING_CONFIG } from "./config/wedding";
 
 export default function Home() {
   useEffect(() => {
