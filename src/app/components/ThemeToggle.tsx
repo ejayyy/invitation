@@ -9,22 +9,17 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className={`relative inline-flex h-8 w-16 items-center rounded-full ${theme === 'light' ? 'bg-gray-200' : 'bg-gray-700'} transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2`}
+      className={`relative inline-flex h-5 w-10 items-center rounded-full ${theme === 'light' ? 'bg-gray-200' : 'bg-gray-700'} transition-colors duration-300`}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
     >
-      {/* Switch Track */}
       <span className="sr-only">Toggle theme</span>
-      
-      {/* Switch Thumb */}
       <span
-        className={`inline-block h-6 w-6 transform rounded-full bg-white shadow-lg transition-transform duration-300 ease-in-out ${
-          theme === 'dark' ? 'translate-x-8' : 'translate-x-1'
-        }`}
+        className={`inline-block h-3 w-3 transform rounded-full bg-white shadow-lg transition-transform duration-300 ease-in-out ${theme === 'dark' ? 'translate-x-6' : 'translate-x-1'
+          }`}
       >
-        {/* Sun Icon (Light Mode) */}
         {theme === 'light' && (
           <svg
-            className="h-4 w-4 text-yellow-500 mx-auto mt-1"
+            className="h-3 w-1.5 text-yellow-500 mx-auto mt-0.5"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -35,11 +30,9 @@ const ThemeToggle = () => {
             />
           </svg>
         )}
-        
-        {/* Moon Icon (Dark Mode) */}
         {theme === 'dark' && (
           <svg
-            className="h-4 w-4 text-gray-700 mx-auto mt-1"
+            className="h-1.5 w-1.5 text-gray-700 mx-auto mt-0.5"
             fill="currentColor"
             viewBox="0 0 20 20"
           >

@@ -111,11 +111,11 @@ export default function Share() {
     <section className="text-center">
       <div className="flex items-center my-8">
         <hr className="grow border-t" />
-        <p className="title">🎊 청첩장 공유</p>
+        <p className="title">🎊 청첩장 초대</p>
         <hr className="grow border-t" />
       </div>
 
-      <div className="flex justify-center gap-2 p-2" data-aos="fade-up">
+      <div className="flex justify-center gap-2 p-2 text-sm">
         <button
           className={`py-2 px-3 rounded-sm flex items-center justify-center bg-[#FAE100] hover:bg-[#E6CD00] text-neutral-800 font-(family-name:--font-ibm-plex-sans-kr) ${!kakaoReady ? 'opacity-50 cursor-not-allowed' : ''
             }`}
@@ -124,13 +124,6 @@ export default function Share() {
         >
           <Image src="/icon/kakao.png" alt="카카오톡" width={16} height={16} />
           <span className="ml-2">카카오톡</span>
-        </button>
-        <button
-          className="bg-neutral-200 hover:bg-neutral-300 text-neutral-800 py-2 px-3 rounded-sm flex items-center justify-center font-(family-name:--font-ibm-plex-sans-kr)"
-          onClick={shareToClipboard}
-        >
-          <Image src="/icon/link.png" alt="링크" width={20} height={20} />
-          <span className="ml-2">링크</span>
         </button>
       </div>
     </section>

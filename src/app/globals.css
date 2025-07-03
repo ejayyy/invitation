@@ -64,7 +64,15 @@ html {
 }
 
 /* 텍스트는 선택 가능하게 */
-p, span, div[class*="text"], h1, h2, h3, h4, h5, h6 {
+p,
+span,
+div[class*="text"],
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   -webkit-user-select: text;
   -moz-user-select: text;
   -ms-user-select: text;
@@ -94,7 +102,7 @@ p, span, div[class*="text"], h1, h2, h3, h4, h5, h6 {
   }
 
   .icon-container span {
-    @apply text-white text-xs p-px rounded mr-1;
+    @apply text-white text-xs p-px rounded mr-1 font-(family-name:--font-ibm-plex-sans-kr) font-light;
   }
 
 }

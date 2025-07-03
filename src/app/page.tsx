@@ -42,8 +42,8 @@ export default function Home() {
       <Gallery />
       <CongratulatoryMoney />
       <Share />
-      <footer className="my-10 px-2 text-center">
-        <p className="mb-4">ⓒ 2025. EJ n John All rights reserved.</p>
+      <footer className="mb-10 mt-25 px-2 text-center">
+        <p className="mb-3 text-sm font-light font-(family-name:--font-ibm-plex-sans-kr)">ⓒ 2025. EJ n John All rights reserved.</p>
         <ThemeToggle />
       </footer>
     </div>

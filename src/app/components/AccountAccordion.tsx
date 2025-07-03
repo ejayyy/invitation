@@ -32,7 +32,7 @@ const AccountAccordion: React.FC<AccountAccordionProps> = ({ title, accounts, is
         onClick={onToggle}
         className="w-full p-3 flex justify-between items-center hover:bg-neutral-100 dark:hover:bg-neutral-900"
       >
-        <span className="font-semibold">{title}</span>
+        <span className="font-light font-(family-name:--font-ibm-plex-sans-kr)">{title}</span>
         <svg
           className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
@@ -57,7 +57,7 @@ const AccountAccordion: React.FC<AccountAccordionProps> = ({ title, accounts, is
                 </div>
                 <button
                   onClick={() => handleCopy(`${acc.bank} ${acc.number}`)}
-                  className="bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 py-2 px-3 rounded-sm text-sm flex items-center basis-2/3"
+                  className="bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 py-2 px-3 rounded-sm text-sm flex items-center basis-2/3"
                 >
                   <Image src={`/bank/${acc.bank}.png`} alt={acc.bank} width={14} height={14} />
                   <span className="text-xs ml-1 mr-2">{acc.bank}</span>
