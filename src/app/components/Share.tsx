@@ -125,6 +125,13 @@ export default function Share() {
           <Image src="/icon/kakao.png" alt="카카오톡" width={16} height={16} />
           <span className="ml-2">카카오톡</span>
         </button>
+        <button
+          className="bg-neutral-200 hover:bg-neutral-300 text-neutral-800 py-2 px-3 rounded-sm flex items-center justify-center font-(family-name:--font-ibm-plex-sans-kr)"
+          onClick={shareToClipboard}
+        >
+          <Image src="/icon/link.png" alt="링크" width={20} height={20} />
+          <span className="ml-2">링크</span>
+        </button>
       </div>
     </section>
   );
