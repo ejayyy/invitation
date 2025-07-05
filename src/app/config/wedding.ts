@@ -43,6 +43,6 @@ export const WEDDING_CONFIG = {
   // KakaoTalk API
   kakaoTalk: {
     apiToken: "f4869301e40d26668570435f63ec4e38",
-    shareImage: "/thumbnails/gallery01.jpg"
+    shareImage: "/thumbnails/IMG_0691.png"
   }
 }; 
