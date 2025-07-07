@@ -105,6 +105,9 @@ h6 {
     @apply text-white text-xs p-px rounded mr-1 font-(family-name:--font-ibm-plex-sans-kr) font-light;
   }
 
+  .image-gallery-image img {
+    @apply max-h-80;
+  }
 }
 
 /* KakaoMap */
