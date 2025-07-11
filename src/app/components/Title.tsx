@@ -4,7 +4,7 @@ import { WEDDING_CONFIG } from "../config/wedding";
 const Title = () => {
   return (
     <section className="-mx-3 relative mt-0 min-h-screen overflow-hidden">
-      <video className="absolute inset-0 h-full w-full object-cover" autoPlay loop muted playsInline poster="/thumbnails/thumbnail.png">
+      <video className="absolute inset-0 h-full w-full object-cover" autoPlay loop muted playsInline preload="auto">
         <source src="/assets/BackgroundVideo.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-x-0 top-[18%] sm:top-[10%] font-medium animate-fade-in text-center text-white">
