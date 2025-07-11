@@ -2,13 +2,10 @@ import React from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
-const images = [
-  { original: "/assets/gallery01.jpg", thumbnail: "/thumbnails/gallery01.jpg" },
-  { original: "/assets/gallery02.jpg", thumbnail: "/thumbnails/gallery02.jpg" },
-  { original: "/assets/gallery03.jpg", thumbnail: "/thumbnails/gallery03.jpg" },
-  { original: "/assets/gallery04.jpg", thumbnail: "/thumbnails/gallery04.jpg" },
-  { original: "/assets/gallery05.jpg", thumbnail: "/thumbnails/gallery05.jpg" },
-];
+const images = [...Array(9)].map((_, index) => ({
+  original: `/assets/gallery${String(index + 1).padStart(2, "0")}.jpg`,
+  thumbnail: `/thumbnails/gallery${String(index + 1).padStart(2, "0")}.jpg`,
+}));
 
 const Gallery = () => {
   return (
@@ -30,4 +27,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery; 
+export default Gallery;
