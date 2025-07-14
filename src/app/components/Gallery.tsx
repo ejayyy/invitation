@@ -2,7 +2,7 @@ import React from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
-const images = [...Array(11)].map((_, index) => ({
+const images = [...Array(10)].map((_, index) => ({
   original: `/assets/gallery${String(index + 1).padStart(2, "0")}.jpg`,
   thumbnail: `/thumbnails/gallery${String(index + 1).padStart(2, "0")}.jpg`,
 }));
