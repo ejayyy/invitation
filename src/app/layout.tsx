@@ -54,14 +54,8 @@ export const metadata: Metadata = {
         url: `/thumbnails/link.png`,
         width: 1200,
         height: 880,
-        alt: `${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name} 청첩장`,
-      },
-      {
-        url: `/thumbnails/share.png`,
-        width: 1200,
-        height: 630,
-        alt: `${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name} 결혼식 초대`,
-      },
+        alt: `${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name}
+       },
     ],
     locale: 'ko_KR',
   },
@@ -70,7 +64,6 @@ export const metadata: Metadata = {
     title: `${WEDDING_CONFIG.groom.name}❤${WEDDING_CONFIG.bride.name}`,
     description: WEDDING_CONFIG.greeting,
     images: ["/thumbnails/share.png"],
-    creator: "@ejnjohn",
   },
 };
 
