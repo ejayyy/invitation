@@ -4,7 +4,7 @@ import "./globals.css";
 import { WEDDING_CONFIG } from "./config/wedding";
 import { ThemeProvider } from "./context/ThemeContext";
 import Script from "next/script";
-import type { Viewport } from 'next'
+import type { Viewport } from "next";
 
 const gowunDodum = Gowun_Dodum({
   subsets: ["latin"],
@@ -26,10 +26,29 @@ export const metadata: Metadata = {
   description: "두 손을 맞잡고 걸어가는 새로운 여정에 여러분을 초대합니다",
   creator: "EJ n John",
   applicationName: "EJ n John Invitation",
+  openGraph: {
+    title: `${WEDDING_CONFIG.groom.name}❤${WEDDING_CONFIG.bride.name}`,
+    description: "두 손을 맞잡고 걸어가는 새로운 여정에 여러분을 초대합니다",
+    type: "website",
+    images: [
+      {
+        url: "/thumbnails/share.png",
+        width: 1200,
+        height: 630,
+        alt: `${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name} 청첩장`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${WEDDING_CONFIG.groom.name}❤${WEDDING_CONFIG.bride.name}`,
+    description: "두 손을 맞잡고 걸어가는 새로운 여정에 여러분을 초대합니다",
+    images: ["/thumbnails/share.png"],
+  },
 };
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   minimumScale: 1,
   maximumScale: 1,
@@ -60,10 +79,10 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${gowunDodum.className} ${ibmPlexSansKR.variable} bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300`}>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+      <body
+        className={`${gowunDodum.className} ${ibmPlexSansKR.variable} bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300`}
+      >
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
