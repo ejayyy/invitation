@@ -84,7 +84,7 @@ export default function Share() {
         addressTitle: '예식장 위치',
         content: {
           title: `🎉 ${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name} 🎉`,
-          description: `${WEDDING_CONFIG.date}, 영등포에서 인사드립니다🤗`,
+          description: `${WEDDING_CONFIG.date}, ${WEDDING_CONFIG.greeting}`,
           imageUrl: `${currentUrl}${WEDDING_CONFIG.kakaoTalk.shareImage}`,
           link: {
             mobileWebUrl: currentUrl,

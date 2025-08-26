@@ -28,13 +28,13 @@ export const metadata: Metadata = {
   applicationName: "EJ n John Invitation",
   openGraph: {
     title: `${WEDDING_CONFIG.groom.name}❤${WEDDING_CONFIG.bride.name}`,
-    description: "두 손을 맞잡고 걸어가는 새로운 여정에 여러분을 초대합니다",
+    description: WEDDING_CONFIG.greeting,
     type: "website",
     images: [
       {
         url: "/thumbnails/share.png",
-        width: 1200,
-        height: 630,
+        width: 800,
+        height: 600,
         alt: `${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name} 청첩장`,
       },
     ],
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${WEDDING_CONFIG.groom.name}❤${WEDDING_CONFIG.bride.name}`,
-    description: "두 손을 맞잡고 걸어가는 새로운 여정에 여러분을 초대합니다",
+    description: WEDDING_CONFIG.greeting,
     images: ["/thumbnails/share.png"],
   },
 };

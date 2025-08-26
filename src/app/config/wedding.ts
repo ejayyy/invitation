@@ -5,6 +5,7 @@ export const WEDDING_CONFIG = {
   time: "오전 10시",
   location: "웨딩그룹 위더스 영등포 7층 펠리체홀",
   address: "서울 영등포구 영중로 55",
+  greeting: "영등포에서 인사드립니다🤗",
 
   // Groom Information
   groom: {
