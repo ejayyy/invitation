@@ -26,24 +26,51 @@ export const metadata: Metadata = {
   description: WEDDING_CONFIG.greeting,
   creator: "EJ n John",
   applicationName: "EJ n John's Invitation",
+  keywords: ['결혼식', '청첩장', '웨딩', '초대장', '결혼', WEDDING_CONFIG.groom.name, WEDDING_CONFIG.bride.name],
+  authors: [{ name: 'EJ n John' }],
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://wedding.ejnjohn.life'),
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: `${WEDDING_CONFIG.groom.name}❤${WEDDING_CONFIG.bride.name}`,
     description: WEDDING_CONFIG.greeting,
     type: "website",
+    url: '/',
+    siteName: "EJ n John's Wedding Invitation",
     images: [
       {
-        url: `https://wedding.ejnjohn.life/thumbnails/link.png`,
+        url: `/thumbnails/link.png`,
         width: 1200,
         height: 880,
         alt: `${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name} 청첩장`,
       },
+      {
+        url: `/thumbnails/share.png`,
+        width: 1200,
+        height: 630,
+        alt: `${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name} 결혼식 초대`,
+      },
     ],
+    locale: 'ko_KR',
   },
   twitter: {
     card: "summary_large_image",
     title: `${WEDDING_CONFIG.groom.name}❤${WEDDING_CONFIG.bride.name}`,
     description: WEDDING_CONFIG.greeting,
     images: ["/thumbnails/share.png"],
+    creator: "@ejnjohn",
   },
 };
 
