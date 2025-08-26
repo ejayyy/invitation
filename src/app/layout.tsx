@@ -23,18 +23,18 @@ const ibmPlexSansKR = IBM_Plex_Sans_KR({
 
 export const metadata: Metadata = {
   title: `${WEDDING_CONFIG.groom.name}❤${WEDDING_CONFIG.bride.name}`,
-  description: "두 손을 맞잡고 걸어가는 새로운 여정에 여러분을 초대합니다",
+  description: WEDDING_CONFIG.greeting,
   creator: "EJ n John",
-  applicationName: "EJ n John Invitation",
+  applicationName: "EJ n John's Invitation",
   openGraph: {
     title: `${WEDDING_CONFIG.groom.name}❤${WEDDING_CONFIG.bride.name}`,
     description: WEDDING_CONFIG.greeting,
     type: "website",
     images: [
       {
-        url: "/thumbnails/share.png",
-        width: 800,
-        height: 600,
+        url: `https://wedding.ejnjohn.life/thumbnails/link.png`,
+        width: 1200,
+        height: 880,
         alt: `${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name} 청첩장`,
       },
     ],
