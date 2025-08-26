@@ -54,8 +54,8 @@ export const metadata: Metadata = {
         url: `/thumbnails/link.png`,
         width: 1200,
         height: 880,
-        alt: `${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name}
-       },
+        alt: `${WEDDING_CONFIG.groom.name} & ${WEDDING_CONFIG.bride.name}`,
+      },
     ],
     locale: 'ko_KR',
   },
@@ -63,7 +63,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${WEDDING_CONFIG.groom.name}❤${WEDDING_CONFIG.bride.name}`,
     description: WEDDING_CONFIG.greeting,
-    images: ["/thumbnails/share.png"],
+    images: ["/thumbnails/link.png"],
+    creator: "@ejnjohn",
   },
 };
 
